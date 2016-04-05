@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt,fleqn]{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\setlength{\mathindent}{10.0pt}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\geometry{
+    a4paper,
+    top=30mm,
+    bottom=30mm,
+    left=20mm,
+    right=20mm
+}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{@{\the\year} -- Filip Konieczny}
+\begin{document}
+    \begin{center}
+    {\Large \textbf{Wzory na pochodne i całki}}\\
+    \vspace{5mm}
+    \begin{minipage}[t]{.45\textwidth}
+        \textbf{Pochodne}
+        \begin{flalign*}
+            &(a)' = 0\hspace{0.5cm}a \in \mathbb{R}& \\
+            &(x)' = 1& \\
+            &(x^\alpha)' = \alpha\cdot x^{\alpha-1}\hspace{0.5cm}\alpha \in \mathbb{R}& \\
+            &(a^x)' = a^x\cdot lna\hspace{0.5cm}& \\
+            &(e^x)' = e^x& \\
+            &(\log_a x)' = \dfrac{1}{x\cdot lna}& \\
+            &(lnx)' = \dfrac{1}{x}& \\
+            &(sinx)' = cosx& \\
+            &(cosx)' = -sinx& \\
+            &(tgx)' = \dfrac{1}{cos^2x}& \\
+            &(ctgx)' = -\dfrac{1}{sin^2x}& \\
+            &(arcsinx)' = \dfrac{1}{\sqrt{1-x^2}}& \\
+            &(arccosx)' = -\dfrac{1}{\sqrt{1-x^2}}& \\
+            &(arctgx)' = \dfrac{1}{1+x^2}& \\
+            &(arcctgx)' = -\dfrac{1}{1+x^2}& \\
+        \end{flalign*}
+        \textbf{Własności pochodnych}\\
+        \begin{flalign*}
+            &(a\cdot f(x))' = a\cdot f'(x)&\\
+            &(f(x)\pm g(x))' = f'(x)\pm g'(x)&\\
+            &(f(x)\cdot g(x))' = f'(x)g(x) + f(x)g'(x)&\\
+            &(\dfrac{f(x)}{g(x)})' = \dfrac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}&\\
+            &(f(g(x)))' = f'(g(x)) \cdot  g'(x)&\\
+            &(ln(f(x))' = \dfrac{f'(x)}{f(x)}&\\
+        \end{flalign*}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.45\textwidth}
+        \textbf{Całki}\\
+        \begin{flalign*}
+            &\int dx = x+C& \\
+            &\int xdx = \dfrac{1}{2}x^2+C& \\
+            &\int x^\alpha dx = \dfrac{1}{\alpha+1}x^{\alpha+1}+C\hspace{0.5cm}\alpha \ne -1& \\
+            &\int a^x dx = \dfrac{a^x}{lna}+C& \\
+            &\int e^x dx = e^x+C& \\
+            &\int log_a x dx = \dfrac{x\cdot lnx-x}{lna}+C& \\
+            &\int \dfrac{1}{x}dx = ln\abs*{x}+C& \\
+            &\int sinxdx = -cosx+C& \\
+            &\int cosxdx = sinx+C& \\
+            &\int tgxdx = -ln\abs*{cosx}+C& \\
+            &\int ctgxdx = ln\abs*{sinx}+C& \\
+            &\int \dfrac{dx}{x^2+a^2} = \dfrac{1}{a}arctg\dfrac{x}{a}+C& \\
+            &\int \dfrac{dx}{x^2-a^2} = \dfrac{1}{2a}ln\abs*{\dfrac{x-a}{x+a}}+C& \\
+            &\int \dfrac{dx}{\sqrt{a^2-x^2}} = arcsin\dfrac{x}{a}+C& \\
+            &\int \dfrac{dx}{\sqrt{x^2+q}} = ln\abs*{x+\sqrt{x^2+q}}+C& \\
+        \end{flalign*}
+        \textbf{Własności całek}\\
+        \begin{flalign*}
+            &\int (a\cdot f(x))dx = a\cdot \int f(x)dx& \\
+            &\int (f(x)\pm g(x))dx = \int f(x)dx \pm \int g(x)dx& \\
+            &\int \dfrac{f'(x)}{f(x)}dx = ln|f(x)|+C&\\
+            &\int f(x)\cdot g'(x)dx = f(x)\cdot g(x) - \int f'(x)\cdot g(x)&\\
+        \end{flalign*}
+    \end{minipage}
+    \end{center}
+\end{document}
