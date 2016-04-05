@@ -5,10 +5,10 @@ Filip Konieczny @ WUT 2016
 
 ### Wzory
 Kod wzorów znajduje się w pliku `calculus_formulas.tex`.  
-Skompilowane wzory do pliku `.pdf` dostępne są [tutaj](formulas)
+Skompilowane wzory do pliku `.pdf` dostępne są [tutaj]
 
 ### Podgląd
 ![preview]
 
-[formulas]: calculus_formulas.pdf
+[tutaj]: calculus_formulas.pdf
 [preview]: preview.png
